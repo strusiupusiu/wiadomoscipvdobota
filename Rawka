@@ -1,0 +1,107 @@
+Poniższą rawdatę wklej do nowej komendy
+{
+  "name": "Wiadmości pv do bota",
+  "permissions": "NONE",
+  "restriction": "3",
+  "_id": "xEfbb",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "memberid",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "memberid",
+      "comparison": "1",
+      "value": "\"${client.user.id}\"",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "comment": "⬇ ID Twojego serwera",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "info": "0",
+      "find": "id_twojego_serwera",
+      "storage": "1",
+      "varName": "SERVER",
+      "name": "Find Server"
+    },
+    {
+      "comment": "⬆ ID Twojego serwera",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "server": "1",
+      "varName": "SERVER",
+      "name": "Change Server"
+    },
+    {
+      "comment": "⬇ ID Twojego Kanału",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "info": "0",
+      "find": "id_kanału",
+      "storage": "1",
+      "varName": "CHANNEL",
+      "name": "Find Channel"
+    },
+    {
+      "comment": "⬆ ID Twojego Kanału",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "title": "NOWA WIADOMOŚĆ WYSŁANA NA PV DO BOTA!!",
+      "author": "",
+      "color": "#15ff00",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "EMBED",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "EMBED",
+      "message": "Kto: ${msg.author.tag} (${msg.author.id})\nTreść: ${msg.content}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "EMBED",
+      "channel": "5",
+      "varName2": "CHANNEL",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "comType": "3"
+}
